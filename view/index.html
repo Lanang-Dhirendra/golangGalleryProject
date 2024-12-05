@@ -1,0 +1,39 @@
+{{define "index"}}
+<!DOCTYPE html>
+<html class="dark">
+
+<head>
+   <title>Gallery</title>
+   {{template "_headRefs"}}
+</head>
+
+<body onload="indexLoad()">
+   {{template "_header"}}
+   <div class="content light">
+      <div class="galleryWrap">
+         <form method="post" action="/" enctype="multipart/form-data">
+            <label>User: </label> <br />
+            <input type="text" name="imgOwner" placeholder="User" /> <br />
+            <div class="img">
+               <label>Image: </label> <br />
+               <img id="kjkjhgfrdcv" alt="" />
+            </div> <br />
+            <input type="button" id="uplBtn" value="Choose file..." onclick="imgUpl()" />
+            <input id="uplImg" type="file" name="image" accept=".jpg,.jpeg,.png,.webp,.gif,.svg" oninput="rdfytugyhiuj()" /> <br />
+            <label>Rename: </label> <br />
+            <input type="text" name="imgName" placeholder="Rename" />
+            <button type="submit">Send to server</button>
+         </form>
+         <div id="gallery"></div>
+         <h1 id="test1"></h1>
+         <h1 id="test2"></h1>
+         <button id="loadImgBtn" onclick="loadImgs(5)">Load more</button> <br/>
+         <h1 id="galleryEnd"></h1> <br/>
+      </div>
+   </div>
+   {{template "_footer"}}
+   <script src="/assets/script.js"></script>
+</body>
+
+</html>
+{{end}}

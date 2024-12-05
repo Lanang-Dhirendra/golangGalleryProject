@@ -1,0 +1,16 @@
+{{define "error"}}
+<!DOCTYPE html>
+<html class="dark">
+   <head>
+      {{template "_headRefs"}}
+   </head>
+   <body>
+      {{template "_header"}}
+      <div class="content light">
+         <h2 id="error">{{.Error}}</h2>
+         <h2 id="error">{{.Error2}}</h2>
+      </div>
+      {{template "_footer"}}
+   </body>
+</html>
+{{end}}

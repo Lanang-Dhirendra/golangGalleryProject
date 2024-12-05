@@ -1,0 +1,232 @@
+@import url(tailwindUtils.css);
+
+@font-face {
+   font-family: mabook;
+   src: url(Mabook.ttf);
+}
+
+:root {
+   /* links */
+   --colpal-blu1: rgb(92, 202, 252);
+
+   /* hover links */
+   --colpal-blu2: rgb(101, 162, 248);
+   
+   /* - */
+   --colpal-blu3: rgb(25, 81, 166);
+   
+   /* default black */
+   --colpal-blu4: rgb(5, 33, 75);
+   
+   /* default white */
+   --colpal-grn1: rgb(181, 252, 200);
+   
+   /* - */
+   --colpal-grn2: rgb(70, 234, 25);
+   
+   /* - */
+   --colpal-grn3: rgb(21, 188, 18);
+   
+   /* - */
+   --colpal-grn4: rgb(9, 145, 7);
+   
+   /* clicked links */
+   --colpal-ylw1: rgb(249, 226, 23);
+   
+   /* - */
+   --colpal-nam1: rgb(0,0,0);
+   
+   font-family: mabook, cursive;
+   scroll-behavior: smooth;
+   vertical-align: middle;
+}
+
+.light {
+   color: var(--colpal-blu4);
+   background-color: var(--colpal-grn1);
+}
+
+.dark {
+   color: var(--colpal-grn1);
+   background-color: var(--colpal-blu4);
+}
+
+.ff-hld {
+   font-family: mabook, cursive;
+   text-transform: uppercase; /*no lowercase chars lol*/
+   font-size: 1.2em;
+   font-weight: normal;
+}
+
+.ff-hld-c {
+   font-size: 1.4em;
+}
+
+.ff-mn {
+   font-family: "Roboto Mono", monospace;
+}
+
+html, body, div, nav {
+   display: inline-block;
+   box-sizing: border-box;
+   text-align: center;
+}
+
+html, body {
+   min-width: 100%; 
+   min-height: 100%; 
+   margin: 0;
+}
+
+a {
+   color: var(--colpal-blu1);
+   text-decoration: none;
+   font-weight: bolder;
+}
+
+a:hover {
+   color: var(--colpal-blu2);
+   text-decoration: underline;
+}
+
+a:active {
+   color: var(--colpal-ylw1);
+   text-decoration: underline;
+}
+
+header, footer, .content, .galleryWrap {
+   min-height: fit-content;
+   width: 100%;
+}
+
+header {
+   display: block;
+   min-height: 5vh;
+   position: sticky;
+   z-index: 10;
+   top: 0;
+   padding: 10px 0;
+}
+
+nav > a {
+   padding: 0 0.5em
+}
+
+.content {
+   min-height: 70vh;
+}
+
+#gallery {
+   display: inline-block;
+   width: 90%;
+   text-align: justify;
+   vertical-align: top;
+}
+
+.imgGallery {
+   display: inline-block;
+   /*text-align: center;*/
+   padding: 0.1%;
+   margin: 0.4%;
+   user-select: none;
+}
+
+.imgGallery > img {
+   background-color: var(--colpal-blu4);
+   height: calc(4vw + 80px);
+   max-width: auto;
+   /* max-width: 90vw; */
+   background-repeat:no-repeat;
+   border: 1px var(--colpal-blu3) solid;
+}
+
+.imgGallery:hover > .imgInfo {
+   opacity: 0.95;
+}
+
+.imgGallery:hover > .imgScore {
+   opacity: 0;
+}
+
+input:where([type='text']) {
+   border-radius: 1em;
+   padding-left: 0.5em;
+   border: 1px var(--colpal-blu4) solid;
+}
+
+input:where([type='file']) {
+   display: none;
+}
+
+button, input:where([type='button']), input:where([type='reset']), input:where([type='submit']) {
+   background-color: var(--colpal-grn2);
+   padding: 5px 10px;
+   text-align: center;
+   border-radius: 4px;
+}
+
+button:hover, input:where([type='button']):hover, input:where([type='reset']):hover, input:where([type='submit']):hover {
+   background-color: var(--colpal-grn3);
+}
+
+button:active, input:where([type='button']):active, input:where([type='reset']):active, input:where([type='submit']):active {
+   background-color: var(--colpal-ylw1);
+}
+
+footer > h1 {
+   font-family: mabook, cursive;
+}
+
+.imgInfo {
+   background-color: var(--colpal-blu3);
+   border: 10px var(--colpal-blu3) solid;
+   /* display: flex; */
+   position: absolute;
+   min-height: 50px;
+   opacity: 0;
+   transition: opacity 0.5s;
+}
+
+.imgScore {
+   background-color: var(--colpal-grn2);
+   color: var(--colpal-blu4);
+   position: absolute;
+   width: calc(1vw + 25px);
+   height: calc(1vw + 25px);
+   opacity: 0.6;
+   transition: opacity 0.5s;
+   vertical-align: bottom;
+}
+
+.infSide {
+   margin-top: calc(calc(4vw + 80px)*-1);
+   height: calc(4vw + 80px);
+   margin-left: calc(2vw + 40px);
+   max-width: 4vw;
+   text-align: left;
+}
+
+.infDown {
+   width: calc(4vw + 80px);
+   text-align: center;
+}
+
+.infLeft {
+   margin-left: -120px;
+}
+
+.infRight {
+   margin-left: 120px;
+}
+
+#toTop {
+   background-color: var(--colpal-blu4);
+   border: 0.1em var(--colpal-blu3) solid;
+   padding: 0.1em 0.5em;
+   height: 6vh;
+   width: 6vh;
+   font-size: 3vh;
+   position: fixed;
+   bottom: 5vh;
+   right: 5vh;
+}

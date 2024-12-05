@@ -1,0 +1,31 @@
+{{define "_headRefs"}}
+<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0" />
+<title>gallery</title>
+<link rel="icon" href="/assets/favicon.png" />
+<link rel="stylesheet" href="/assets/style.css" />
+{{end}}
+
+{{define "_header"}}
+<header class="webBar dark" id="header">
+   <nav>
+      <a href="/" class="ff-hld">Home</a>
+      <a href="/about" class="ff-hld">About-Me</a>
+   </nav>
+</header>
+{{end}}
+
+{{define "_footer"}}
+<a id="toTop" href="#">^</a>
+<footer class="webBar dark">
+   <h1 class="ff-hld"><span class="ff-hld-c">M</span>ade by <a href="https://github.com/Lanang-Dhirendra" target="_blank"><span class="ff-hld-c">IA</span>m<span class="ff-hld-c">AG</span>uest</a>🌞👍</h1>
+</footer>
+{{end}}
+
+<!-- currently unused -->
+{{define "_galleryImg"}}
+<a href="/gallery/THE IMG FILENAME HERE" class="imgGallery" onmouseover='showImg("THE IMG ID HERE")' onmouseleave='showImg("THE IMG ID HERE")' draggable="false">
+   <div class="imgScore ff-mn">THE IMG SCORE HERE</div>
+   <img src="/gallery/THE IMG FILENAME HERE" alt="THE IMG ID HERE" draggable="false"/>
+   <div class="imgInfo" id="imgInfoTHE IMG ID HERE"></div>
+</a>
+{{end}}
